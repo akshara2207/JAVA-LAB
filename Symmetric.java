@@ -28,6 +28,7 @@ public class Symmetric{
    for(int j=0;j<c;j++) 
      if(a[i][j]==b[i][j])
        x=1;
+       break;
 if(x==1)
   System.out.println("the matrix is symmetric");
 else
