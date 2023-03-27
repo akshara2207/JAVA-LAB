@@ -29,9 +29,9 @@ public class Symmetric{
      if(a[i][j]==b[i][j])
        x=1;
 if(x==1)
-  System.out.println("yes");
+  System.out.println("the matrix is symmetric");
 else
-  System.out.println("No");
+  System.out.println("the matrix is not symmetric");
   
      }
   
