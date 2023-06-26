@@ -1,4 +1,4 @@
- import java.util.Scanner;
+import java.util.Scanner;
 
 interface prop
 {
@@ -21,7 +21,7 @@ class Circle implements prop
     @Override
     public void perimeter()
     {
-        System.out.println("Perimeter of the circle: "+(2*pi*r));
+        System.out.println("Area  of the circle: "+(2*pi*r));
     }
     @Override
     public void area()
@@ -45,12 +45,34 @@ class Rectangle implements prop
     @Override
     public void area()
     {
-        System.out.println("Perimeter of a rectangle: "+(l*b));
+        System.out.println("Area Perimeter of a rectangle: "+(l*b));
     }
     @Override
     public void perimeter()
     {
         System.out.println("Perimeter of a rectangle: "+(2*(l+b)));
+    }
+}
+
+class Square implements prop
+{
+    double side;
+    Scanner sc = new Scanner(System.in);
+    @Override
+    public void getdata()
+    {
+        System.out.println("Enter the side of the square:");
+       side = sc.nextDouble();
+    }
+    @Override
+    public void area()
+    {
+        System.out.println(" Area of a Square: "+(side*side));
+    }
+    @Override
+    public void perimeter()
+    {
+        System.out.println("Perimeter of a Square: "+(4*side));
     }
 }
 
@@ -62,9 +84,10 @@ public class Shapes
         Scanner sc = new Scanner(System.in);
         Circle ob = new Circle();
         Rectangle obj = new Rectangle();
+	Square ob1 = new Square();
         do
         {
-            System.out.println("\n1.Circle\n2.Rectangle\n3.exit");
+            System.out.println("\n1.Circle\n2.Rectangle\n3.Square\n4.exit");
             System.out.println("Enter your choice:");
             ch = sc.nextInt();
             switch(ch)
@@ -77,10 +100,13 @@ public class Shapes
                         obj.area();
                         obj.perimeter();
                         break;
-                case 3 :System.out.println("Exited...");
+	               case 3 :ob1.getdata();
+                        ob1.area();
+                        ob1.perimeter();
+                        break;
+                case 4 :System.out.println("Exited...");
                         System.exit(0);
             }
         }while(true);
     }
 }
-
