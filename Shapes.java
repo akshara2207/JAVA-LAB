@@ -45,7 +45,7 @@ class Rectangle implements prop
     @Override
     public void area()
     {
-        System.out.println("Area Perimeter of a rectangle: "+(l*b));
+        System.out.println("Area of a rectangle: "+(l*b));
     }
     @Override
     public void perimeter()
