@@ -7,6 +7,7 @@ interface calc
 
 class bill implements calc
 {
+
     String date,name,p_id;
     int quantity;
     double unit_price,total,namount=0;
@@ -22,6 +23,7 @@ class bill implements calc
         System.out.println("Enter the unit price:");
         unit_price = sc.nextDouble();
     }
+    
     public void calculate()
     {
         total = quantity * unit_price;
@@ -32,8 +34,7 @@ class bill implements calc
     }
 }
 
-
-public class calculator 
+public class calculator
 {
     public static void main(String[] args) 
     {
