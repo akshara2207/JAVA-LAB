@@ -21,12 +21,12 @@ class Circle implements prop
     @Override
     public void perimeter()
     {
-        System.out.println("Area  of the circle: "+(2*pi*r));
+        System.out.println("Perimeter  of the circle: "+(2*pi*r));
     }
     @Override
     public void area()
     {
-        System.out.println("Perimeter of the circle: "+(pi*r*r));
+        System.out.println("Area of the circle: "+(pi*r*r));
     }
 }
 
