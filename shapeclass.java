@@ -27,7 +27,7 @@ class square extends shape
 	System.out.println("enter the side");
 	a=s.nextInt();
 	area_sq=a*a;
-	System.out.println("The area of triangle is:"+area_sq);
+	System.out.println("The area of square is:"+area_sq);
 }
 }
 class circle extends shape
