@@ -1,37 +1,39 @@
 import java.util.Scanner;
-class Student{
+ 
+ class Student {
 	int rollno;
 	String name;
 	String std;
 
 Student(int rl,String na,String sd)
 {
-	this.rollno=rl;
-	this.name=na;
-	this.std=sd;
+	rollno=rl;
+	name=na;
+	std=sd;
 }
 
 }
-class Sports 
+ class Sports extends Student
 {
 	String item;
 	String pos;
-Sports(String it,String p)
-{
-	this.item=it;
-	this.pos=p;
+Sports(int rl,String na,String sd,String it,String p){
+	super(rl,na,sd);
+	item=it;
+	pos=p;
 }
 }
 
-public class Results extends Sports,Student
+ class Results extends Sports
 {
 	String res;
- Results(int rl,String na,String std,String it,String p,String r)
+ Results(int rl,String na,String sd,String it,String p,String r)
 {
-	super(rl,na,sd,it,p)
-	this.res=r;
+	super(rl,na,sd,it,p);
+	res=r;
 }
-  void display(){
+  void display()
+{
     System.out.println("Rollno: "+rollno);
     System.out.println("Name: "+name);
     System.out.println("Std: "+std);
@@ -39,7 +41,8 @@ public class Results extends Sports,Student
     System.out.println("Position: "+pos);
     System.out.println("Result: "+res);
  }
-public static void main(String[] args) {
+public static void main (String args[])
+{
     System.out.println("\nEnter the No. of Students");
     Scanner sc1 = new Scanner(System.in);
     int num = sc1.nextInt();
@@ -59,11 +62,11 @@ public static void main(String[] args) {
         String pos=sc.next();
         System.out.println("\nEnter Result");
         String res=sc.next();
-        arr[i]=new Results(rollno,name,std,item,pos,result);
+        arr[i]=new Results(rollno,name,std,item,pos,res);
     
 
     }
-    System.out.println("Informations of all the students");
+    System.out.println("\nInformations of all the students\n");
     for(int i=0;i<num;i++){
         int j=i+1;
         System.out.println("\n"+j+").");
@@ -72,5 +75,6 @@ public static void main(String[] args) {
  }
 
  }
+}
 
 
